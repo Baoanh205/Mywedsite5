@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Đa Ngôn Ngữ Hoàn Hảo</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Trang web đa ngôn ngữ với giao diện hiện đại và tương tác mượt mà.">
+    <meta property="og:title" content="Trang Web Đa Ngôn Ngữ Hoàn Hảo">
+    <meta property="og:description" content="Khám phá trang web đa ngôn ngữ với thiết kế hiện đại, thư viện hình ảnh và tài nguyên hữu ích.">
+    <meta property="og:image" content="https://placehold.co/600x400?text=Preview+Image">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #1e90ff;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            background-color: #00cc99;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+        }
+        main {
+            background-color: #ffffff;
+            font-size: 18px;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            text-align: center;
+            padding: 1.5rem;
+            width: 100%;
+        }
+        li {
+            display: inline-block;
+            width: 200px;
+            margin: 0.5rem;
+            padding: 1rem;
+            background: #dfe6e9;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        li:hover {
+            transform: translateY(-5px);
+            background: #00cc99;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #ff4757;
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            line-height: 1.6;
+            color: #2d3436;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            color: #00cc99;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ff4757;
+            text-decoration: underline;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .lang-switch a {
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #ffffff;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .lang-switch a:hover {
+            background: #00cc99;
+            color: white;
+        }
+        [lang="en"] .vi, [lang="vi"] .en {
+            display: none;
+        }
+        section {
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            main { margin: 1rem; padding: 1rem; }
+            li { width: 100%; margin: 0.5rem 0; }
+            .lang-switch { position: static; text-align: center; margin: 1rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="vi">Khám Phá Trang Web Hoàn Hảo</h1>
+        <h1 class="en">Explore the Perfect Website</h1>
+        <div class="lang-switch">
+            <a href="#" onclick="document.documentElement.lang='vi'; return false;">Tiếng Việt</a>
+            <a href="#" onclick="document.documentElement.lang='en'; return false;">English</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="vi">Trang Chủ</a><a href="#" class="en">Home</a></li>
+            <li><a href="#" class="vi">Giới Thiệu</a><a href="#" class="en">About</a></li>
+            <li><a href="#" class="vi">Liên Hệ</a><a href="#" class="en">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2 class="vi">Giới Thiệu</h2>
+            <h2 class="en">Introduction</h2>
+            <p class="vi">Chào mừng bạn đến với trang web đa ngôn ngữ với thiết kế hiện đại và tương tác mượt mà.</p>
+            <p class="en">Welcome to a multilingual website with a modern design and smooth interactions.</p>
+            <ul>
+                <li class="vi">Mục 1: Thiết kế đáp ứng và trực quan</li>
+                <li class="en">Item 1: Responsive and intuitive design</li>
+                <li class="vi">Mục 2: Hiệu ứng chuyển đổi mượt mà</li>
+                <li class="en">Item 2: Smooth transition effects</li>
+                <li class="vi">Mục 3: Hỗ trợ đa ngôn ngữ tối ưu</li>
+                <li class="en">Item 3: Optimized multilingual support</li>
+            </ul>
+        </section>
+        <section>
+            <h2 class="vi">Thư Viện Hình Ảnh</h2>
+            <h2 class="en">Image Gallery</h2>
+            <div class="image-gallery">
+                <img src="https://placehold.co/200x200?text=Hình+1" alt="Hình ảnh số 1 minh hoạ thiết kế trang web hiện đại">
+                <img src="https://placehold.co/200x200?text=Hình+2" alt="Hình ảnh số 2 với hiệu ứng đẹp mắt">
+                <img src="https://placehold.co/200x200?text=Hình+3" alt="Hình ảnh số 3 minh hoạ giao diện người dùng">
+            </div>
+        </section>
+        <section>
+            <h2 class="vi">Tài Nguyên</h2>
+            <h2 class="en">Resources</h2>
+            <p class="vi">Khám phá thêm về phát triển web tại <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.</p>
+            <p class="en">Learn more about web development at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p class="vi">© 2025 Trang Web Đa Ngôn Ngữ - Được tạo với đam mê</p>
+        <p class="en">© 2025 Multilingual Website - Crafted with passion</p>
+    </footer>
+</body>
+</html>
